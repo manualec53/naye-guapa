@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff67a1; /* Rosado */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row; /* Cambiado a row para alinear el corazón y el texto en fila */
+    text-align: center;
+    background-image: linear-gradient(to bottom, #ff67a1, #ffc5c5); /* Agregado un degradado de fondo */
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.5rem; /* Aumentado el tamaño del título */
+    margin: 0 0 0.rem; /* Ajustado para que el texto no toque los márgenes */
+    text-shadow: px 2px 4px rgba(0, 0, 0, 0.1); /* Agregado una sombra de texto */
+  }
+  
+  .heart {
+    width: 102px; /* Aumentado el tamaño del corazón */
+    height: 102px;
+    background-color: #ff0033; /* Cambiado el color del corazón a un rojo más intenso */
+    position: absolute; /* Cambiado a absolute para mover el corazón */
+    left: 5%; /* Centrado horizontalmente */
+    top: 11%; /* Centrado verticalmente */
+    transform: translateY(-50%) rotate(-45deg) scale(1.2); /* Centro verticalmente, rotado y escalado */
+    animation: pulse 1.5s infinite;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregado una sombra al corazón */
+  }
+  
+  .heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    background-color: #ff0033;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -55px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 55px;
+    top: 0;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-45deg);
+    }
+    100% {
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+  
+  img {
+    width: 250px; /* Aumentado el tamaño de la imagen */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.2);
+  }
+  
+
+  
